@@ -170,6 +170,13 @@ class World(
     }
 
     /**
+     * Updates an [entity] using the given [configuration] to add and remove components.
+     */
+    inline fun configureEntity(entity: Entity, configuration: EntityUpdateCfg.(Entity) -> Unit) {
+        entityService.configureEntity(entity, configuration)
+    }
+
+    /**
      * Adds a new [entity][Entity] to the world using the given [configuration][EntityCreateCfg].
      */
     inline fun entity(configuration: EntityCreateCfg.(Entity) -> Unit = {}): Entity {
