@@ -1,7 +1,3 @@
-import com.soywiz.korge.gradle.*
-
-apply<KorgeGradlePlugin>()
-
 plugins {
 //    kotlin("multiplatform") version "1.6.10"
     id("org.jetbrains.kotlinx.benchmark") version "0.4.2"

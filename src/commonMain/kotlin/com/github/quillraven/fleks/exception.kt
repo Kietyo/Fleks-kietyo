@@ -37,3 +37,6 @@ class FleksNoSuchEntityComponentException(entity: Entity, component: String) :
 
 class FleksUnusedInjectablesException(unused: List<KClass<*>>) :
     FleksException("There are unused injectables of following types: ${unused.map { it.simpleName }}")
+
+class FleksMissingNoArgsComponentConstructorException(component: KClass<*>) :
+    FleksException("Component ${component.simpleName} is missing a no-args constructor")
